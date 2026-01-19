@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherMe | Today</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="top" id="mainHeader">
+  <div class="logo">☁️ WeatherMe <span id="time"></span></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="active">Today</a>
+    <a href="tomorrow.html">Tomorrow</a>
+    <a href="monthly.html">Monthly</a>
+    <a href="login.html" class="login-btn">Login</a>
+  </nav>
+
+  <div class="controls">
+    °C <input type="checkbox" id="unitToggle"> °F
+    <div class="burger" id="burger">☰</div>
+  </div>
+</header>
+
+<section class="search">
+  <div class="search-container">
+    <div class="search-box">
+      <input id="cityInput" placeholder="Search location..." autocomplete="off"/>
+      <button id="searchBtn" class="search-btn">🔍</button>
+    </div>
+    <div id="loader" class="loader"></div>
+    <span id="errorMsg" class="search-error"></span>
+  </div>
+</section>
+
+<main class="main">
+  <article class="card">
+    <h2 id="city">—</h2>
+    <p id="date"></p>
+
+    <div class="temp">
+      <span id="temp">--</span>°
+      <img id="icon" alt="">
+    </div>
+
+    <div class="stats">
+      <div>Humidity <b id="humidity"></b></div>
+      <div>Visibility <b id="visibility"></b></div>
+      <div>Pressure <b id="pressure"></b></div>
+      <div>Wind <b id="wind"></b></div>
+    </div>
+  </article>
+</main>
+
+<section class="hourly" id="hourly"></section>
+
+<div id="cookieBanner" class="cookie-banner">
+  <p>We use cookies to improve your experience.</p>
+  <button id="acceptCookies">Accept</button>
+</div>
+
+<script src="weather.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

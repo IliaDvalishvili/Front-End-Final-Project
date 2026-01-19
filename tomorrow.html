@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherMe | Tomorrow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="top" id="mainHeader">
+  <div class="logo">☁️ WeatherMe <span id="time"></span></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html">Today</a>
+    <a href="tomorrow.html" class="active">Tomorrow</a>
+    <a href="monthly.html">Monthly</a>
+    <a href="login.html" class="login-btn">Login</a>
+  </nav>
+
+  <div class="controls">
+    °C <input type="checkbox" id="unitToggle"> °F
+    <div class="burger" id="burger">☰</div>
+  </div>
+</header>
+
+<main class="main">
+  <h1 style="margin: 0; text-align: center;">Tomorrow's Forecast</h1>
+  
+  <article class="card" id="tomorrowCard">
+    <h2 id="t-city">Loading...</h2>
+    <p id="t-date"></p>
+
+    <div class="temp">
+      <span id="t-temp">--</span>°
+      <img id="t-icon" alt="weather icon">
+    </div>
+
+    <div class="stats">
+      <div>Humidity <b id="t-humidity"></b></div>
+      <div>Pressure <b id="t-pressure"></b></div>
+      <div>Wind <b id="t-wind"></b></div>
+      <div>Weather <b id="t-desc"></b></div>
+    </div>
+  </article>
+</main>
+
+<script src="weather.js"></script>
+<script src="app.js"></script>
+<script>
+  loadTomorrow();
+</script>
+
+</body>
+</html>

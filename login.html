@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherMe | Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="top" id="mainHeader">
+  <div class="logo">☁️ WeatherMe <span id="time"></span></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html">Today</a>
+    <a href="tomorrow.html">Tomorrow</a>
+    <a href="monthly.html">Monthly</a>
+    <a href="login.html" class="active">Login</a>
+  </nav>
+
+  <div class="controls">
+    °C <input type="checkbox" id="unitToggle"> °F
+    <div class="burger" id="burger">☰</div>
+  </div>
+</header>
+
+<main class="main" style="justify-content: center; min-height: 80vh;">
+  <form class="login-form" id="loginForm">
+    <h2 style="text-align: center; margin: 0 0 20px 0;">Sign In</h2>
+    
+    <div class="input-group">
+      <label>Email</label>
+      <input type="text" id="email" placeholder="example@mail.com">
+      <small class="error-msg"></small>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <div class="pass-wrapper">
+        <input type="password" id="password" placeholder="******">
+        <span id="togglePass">👁️</span>
+      </div>
+      <small class="error-msg"></small>
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
